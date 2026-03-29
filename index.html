@@ -1,8 +1,112 @@
-<html>
-    <head>
-        <title>My first project</title>
-    </head>
-    <body>
-        <h1>I forgot</h1>
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevPortal // Alpha v0.1.4</title>
+    <style>
+        :root {
+            --bg: #0d1117;
+            --green: #238636;
+            --text: #c9d1d9;
+            --dim: #484f58;
+            --accent: #58a6ff;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'SF Mono', 'Fira Code', 'Courier New', monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .container {
+            border: 1px solid var(--dim);
+            padding: 2rem;
+            max-width: 600px;
+            width: 90%;
+            position: relative;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+
+        .header {
+            border-bottom: 1px solid var(--dim);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .status {
+            font-size: 0.8rem;
+            color: var(--green);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        h1 {
+            font-size: 1.2rem;
+            margin: 0;
+            color: var(--accent);
+        }
+
+        .code-block {
+            background: #161b22;
+            padding: 1rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: #79c0ff;
+        }
+
+        .cursor {
+            display: inline-block;
+            width: 8px;
+            height: 15px;
+            background: var(--green);
+            animation: blink 1s infinite;
+            vertical-align: middle;
+        }
+
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+
+        .footer {
+            margin-top: 2rem;
+            font-size: 0.7rem;
+            color: var(--dim);
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h1>PROJECT_REDACTED</h1>
+        <div class="status">● System Online</div>
+    </div>
+
+    <div class="code-block">
+        <span style="color: #8b949e;">// Security audit in progress...</span><br>
+        <span style="color: #ff7b72;">if</span> (system.isVulnerable) {<br>
+        &nbsp;&nbsp;console.log(<span style="color: #a5d6ff;">"Authorized personnel only."</span>);<br>
+        }<br>
+        <span class="cursor"></span>
+    </div>
+
+    <div class="footer">
+        Build: 2026.03.30-stable<br>
+        Powered by LannaSec
+    </div>
+</div>
+
+</body>
 </html>
